@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+# rxjs demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 引言
 
-## Available Scripts
+本示例是我对 rxjs 作为数据管理的理解，以及我使用 rxjs 的一点心得。同时本示例也附带了使用 react hooks 对接 observable 数据类型的使用方式。
 
-In the project directory, you can run:
+## 正文
 
-### `npm start`
+在使用 rxjs 之前，我有使用过函数式编程（FP）的学习经历，在学习函数式编程时，有一个函数式编程和指令式编程不同的疑问，之前有一个答案我很赞同：
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> 指令式编程要求研发步步考虑到，要一步一步的告诉计算机怎么得到结果。如果说在指令式编程中，研发人员是工作，那在函数式编程中，研发人员就是工程师，函数式程序更像是一张蓝图。描述了系统长什么样，而具体的实现，研发人员是不需要关心的。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+这段话对我使用 rxjs 有一个指导作用，使用 rxjs 编程，就要用流式的范式来思考程序的实现，如果使用指令式的思想来指导自己使用 rxjs，会觉得非常的别扭。以下我会使用一个示例，来说明在流式编程中，是怎么构建起来的。
 
-### `npm test`
+### 示例场景
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+这个示例场景是这样的：
+用户可以访问一个列表，该列表上有一系列的人，用户可以点击其中一个人名，查看该人的详情信息。详情信息是需要使用网络请求从服务器上拉取的。该 demo 使用了 github 的 api，仅仅是因为 github 的 open api 是支持跨域的，用来写演示成本非常的低。
 
-### `npm run build`
+以下示例均使用 react 演示
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 指令式编程
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+所以让我们来思考指令式编程会怎么做，首先假设我们有一个名字列表
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```typescript
+function App() {}
+```
