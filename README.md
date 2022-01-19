@@ -1,5 +1,5 @@
 # rxjs demo
-
+体验地址：[https://cexoso.github.io/rx-demo/](https://cexoso.github.io/rx-demo/)
 ## 引言
 
 本示例是我对 rxjs 作为数据管理的理解，以及我使用 rxjs 的一点心得。同时本示例也附带了使用 react hooks 对接 observable 数据类型的使用方式。

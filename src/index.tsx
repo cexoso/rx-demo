@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { NormalDemo } from "./App";
+import { RxjsDemo } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <NormalDemo />
+    <RxjsDemo />
   </React.StrictMode>,
   document.getElementById("root")
 );
